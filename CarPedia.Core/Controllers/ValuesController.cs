@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CarPedia.Core.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("v1/cars")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
         [HttpGet]
+        [Route("manufacturers")]
         public ActionResult<IEnumerable<string>> Get()
         {
             return new string[] { "value1", "value2" };
